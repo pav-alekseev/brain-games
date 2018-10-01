@@ -1,0 +1,33 @@
+{
+  "name": "brain-games-rukkiesman",
+  "version": "1.0.0",
+  "description": "First Hexlet Project",
+  "main": "dist/index.js",
+  "bin": {
+     "brain-games": "dist/bin/brain-games.js"
+   },
+   "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RukkiesMan/project-lvl1-s356.git"
+  },
+  "author": "Alekseev Pavel <pavelekseev@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RukkiesMan/project-lvl1-s356/issues"
+  },
+  "homepage": "https://github.com/RukkiesMan/project-lvl1-s356#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.1.0"
+  }
+}
