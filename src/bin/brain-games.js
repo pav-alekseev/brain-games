@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-/* eslint no-console */
+/* eslint no-console: "error" */
 
 import askUserName from '..';
 

@@ -1,4 +1,4 @@
-/* eslint no-console */
+/* eslint no-console: "error" */
 
 import readlineSync from 'readline-sync';
 
