@@ -3,4 +3,5 @@
 import { askUserName, showGreeting } from '..';
 
 console.log('Welcome to the Brain Games!');
-askUserName();
+const name = askUserName();
+showGreeting(name);
