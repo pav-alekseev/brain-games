@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "First Hexlet Project",
   "bin": {
-     "brain-games": "dist/bin/brain-games.js"
-   },
-   "files": [
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "files": [
     "dist"
   ],
   "scripts": {
