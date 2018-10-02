@@ -1,3 +1,5 @@
+/* eslint no-console */
+
 import readlineSync from 'readline-sync';
 
 export default () => {
