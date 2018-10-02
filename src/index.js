@@ -8,3 +8,5 @@ export const askUserName = () => {
 export const getRandomNum = maxNumber => Math.floor(Math.random() * Math.floor(maxNumber));
 
 export const showRandomNumber = maxNumber => console.log(`Question: ${showRandomNumber(maxNumber)}`);
+
+export const askUserAnswer = () => readlineSync.question('Your answer: ');
