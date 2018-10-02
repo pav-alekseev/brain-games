@@ -4,7 +4,7 @@
 This is the first [Hexlet](https://ru.hexlet.io) project
 ##
 
-# nodejs-package
+# brain-games-rukkiesman
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 [![Build Status](https://travis-ci.com/RukkiesMan/project-lvl1-s356.svg?branch=master)](https://travis-ci.com/RukkiesMan/project-lvl1-s356)
