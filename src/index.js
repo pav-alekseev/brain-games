@@ -6,6 +6,6 @@ export const showGreeting = name => console.log(`Hello, ${name}!`);
 
 export const getRandomNum = maxNumber => Math.floor(Math.random() * Math.floor(maxNumber));
 
-export const showRandomNumber = maxNumber => console.log(`Question: ${showRandomNumber(maxNumber)}`);
+export const showQuestionNumber = number => console.log(`Question: ${number}`);
 
 export const askUserAnswer = () => readlineSync.question('Your answer: ');
