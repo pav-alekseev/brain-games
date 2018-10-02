@@ -15,9 +15,3 @@ This is the first [Hexlet](https://ru.hexlet.io) project
 ```sh
 $ make install
 ```
-
-## Run tests
-
-```sh
-$ make test
-```
