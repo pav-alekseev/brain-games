@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
 
-export const askUserName = () => readlineSync.question('\nMay I have your name? ');
+export const askUserName = () => readlineSync.question('May I have your name? ');
 
-export const showGreeting = name => console.log(`Hello, ${name}!\n`);
+export const showGreeting = name => console.log(`Hello, ${name}!`);
 
 export const getRandomNum = maxNumber => Math.floor(Math.random() * Math.floor(maxNumber));
 
