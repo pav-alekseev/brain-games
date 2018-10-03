@@ -4,7 +4,8 @@
   "description": "First Hexlet Project",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/bran-calc.js"
   },
   "files": [
     "dist"

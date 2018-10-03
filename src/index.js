@@ -50,3 +50,7 @@ export const playBrainEven = () => {
     console.log(`Let's try again, ${userName}!`);
   }
 };
+
+export const playBrainCalc = () => {
+
+};
