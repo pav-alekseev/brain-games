@@ -21,7 +21,6 @@ export const playBrainEven = () => {
 
   const iter = (currentLap) => {
     if (currentLap === numberOfLaps) {
-      console.log(`Congratulations, ${userName}!`);
       return true;
     }
     const question = getRandomNum(20);
@@ -32,9 +31,14 @@ export const playBrainEven = () => {
       console.log('Correct!');
       return iter(currentLap + 1);
     }
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${userName}!`);
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
     return false;
   };
 
-  return iter(0);
+  const isWin = iter(0);
+  if (isWin) {
+    console.log(`Congratulations, ${userName}!`);
+  } else {
+    console.log(`Let's try again, ${userName}!`);
+  }
 };
