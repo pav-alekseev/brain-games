@@ -1,39 +1,38 @@
 import readlineSync from 'readline-sync';
 
-const askUser = question => readlineSync.question(question);
-
-const showToUser = text => console.log(text);
-
 const getRandomNum = maxNumber => Math.floor(Math.random() * Math.floor(maxNumber));
 
+const isEven = number => number % 2 === 0;
+
 export const playBrainGames = () => {
-  showToUser('Welcome to the Brain Games!\n');
-  const name = askUser('May I have your name? ');
-  showToUser(`Hello, ${name}!`);
+  console.log('Welcome to the Brain Games!\n');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
 };
 
 export const playBrainEven = () => {
-  showToUser('Welcome to the Brain Games!');
-  showToUser('Answer "yes" if number even otherwise answer "no"\n');
+  const numberOfLaps = 3;
 
-  const name = askUser('May I have your name? ');
-  showToUser('\n');
+  console.log('Welcome to the Brain Games!');
+  console.log('Answer "yes" if number even otherwise answer "no"\n');
+
+  const userName = readlineSync.question('May I have your name? ');
+  console.log('\n');
 
   const iter = (currentLap) => {
-    if (currentLap === 3) {
-      return `Congratulations, ${name}!`;
+    if (currentLap === numberOfLaps) {
+      return `Congratulations, ${userName}!`;
     }
-    const number = getRandomNum(20);
-    showToUser(`Question: ${number}`);
-    const isEvenNumber = (number % 2 === 0) ? 'yes' : 'no';
-    const answer = askUser('Your answer: ');
+    const question = getRandomNum(20);
+    console.log(`Question: ${question}`);
+    const isEvenNumber = isEven(question) ? 'yes' : 'no';
+    const answer = readlineSync.question('Your answer: ');
     if (isEvenNumber === answer) {
-      showToUser('Correct!');
+      console.log('Correct!');
       return iter(currentLap + 1);
     }
-    const correctAnswer = (answer === 'yes' ? 'no' : 'yes');
-    return `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`;
+    return `'${answer}' is wrong answer ;(. Correct answer was '${isEvenNumber}'.\nLet's try again, ${userName}!`;
   };
 
-  return iter(0);
+  console.log(iter(0));
 };
