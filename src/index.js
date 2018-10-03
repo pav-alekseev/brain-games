@@ -2,6 +2,8 @@ import readlineSync from 'readline-sync';
 
 const numberOfLaps = 3;
 
+const showGameGreeting = () => console.log('Welcome to the Brain Games!');
+
 const getUserName = () => {
   const userName = readlineSync.question('May I have your name? ');
   return userName;
@@ -12,13 +14,14 @@ const getRandomNum = maxNumber => Math.floor(Math.random() * Math.floor(maxNumbe
 const isEven = number => number % 2 === 0;
 
 export const playBrainGames = () => {
-  console.log('Welcome to the Brain Games!\n');
+  showGameGreeting();
+  console.log('\n');
   const userName = getUserName();
   console.log(`Hello, ${userName}!`);
 };
 
 export const playBrainEven = () => {
-  console.log('Welcome to the Brain Games!');
+  showGameGreeting();
   console.log('Answer "yes" if number even otherwise answer "no"\n');
 
   const userName = getUserName();
