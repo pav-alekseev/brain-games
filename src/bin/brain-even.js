@@ -12,7 +12,7 @@ const playGame = (userName) => {
     const isEvenNumber = (number % 2 === 0) ? 'yes' : 'no';
     const answer = askUser('Your answer: ');
     if (isEvenNumber === answer) {
-      console.log('Correct!');
+      showToUser('Correct!');
       return iter(currentLap + 1);
     }
     const correctAnswer = (answer === 'yes' ? 'no' : 'yes');
@@ -21,9 +21,9 @@ const playGame = (userName) => {
   return iter(0);
 };
 
-console.log('Welcome to the Brain Games!');
-console.log('Answer "yes" if number even otherwise answer "no"\n');
+showToUser('Welcome to the Brain Games!');
+showToUser('Answer "yes" if number even otherwise answer "no"\n');
 
 const name = askUser('May I have your name? ');
-console.log('\n');
-console.log(playGame(name));
+showToUser('\n');
+showToUser(playGame(name));
