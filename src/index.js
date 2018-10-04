@@ -2,8 +2,6 @@ import readlineSync from 'readline-sync';
 
 const numberOfLaps = 3;
 
-export const maxRandomNumber = 20;
-
 const expressions = [
   {
     calculate: (firstNumber, secondNumber) => firstNumber + secondNumber,

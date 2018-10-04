@@ -1,10 +1,12 @@
 import {
-  maxRandomNumber, showQuestion, getUserAnswer, getRandomNumber, isRightUserAnswer, isEven,
+  showQuestion, getUserAnswer, getRandomNumber, isRightUserAnswer, isEven,
   playGame,
 } from '..';
 
+const maxQuestionNumber = 20;
+
 const gameIteration = () => {
-  const questionNumber = getRandomNumber(maxRandomNumber);
+  const questionNumber = getRandomNumber(maxQuestionNumber);
   showQuestion(questionNumber);
   const rightAnswer = isEven(questionNumber) ? 'yes' : 'no';
   const userAnswer = getUserAnswer();
