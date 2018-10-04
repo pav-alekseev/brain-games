@@ -1,6 +1,5 @@
 import {
-  showGameGreeting, showUserGreeting, showQuestion, showResult, getUserName, getUserAnswer,
-  getRandomNumber, gameLoop, isRightUserAnswer,
+  showQuestion, getUserAnswer, getRandomNumber, isRightUserAnswer, playGame,
 } from '..';
 
 const maxNumber = 100;
@@ -12,8 +11,10 @@ const getGCD = (firstNumber, secondNumber) => {
   if (firstNumber === secondNumber) {
     return firstNumber;
   }
-  return firstNumber > secondNumber ? getGCD(firstNumber - secondNumber, secondNumber)
-    : getGCD(firstNumber, secondNumber - firstNumber);
+  if (firstNumber > secondNumber) {
+    return getGCD(firstNumber - secondNumber, secondNumber);
+  }
+  return getGCD(firstNumber, secondNumber - firstNumber);
 };
 
 const gameIteration = () => {
@@ -25,14 +26,4 @@ const gameIteration = () => {
   return isRightUserAnswer(rightAnswer, userAnswer);
 };
 
-export default () => {
-  showGameGreeting();
-  console.log('Find the greatest common divisor of given numbers.\n');
-
-  const userName = getUserName();
-  showUserGreeting(userName);
-  console.log('\n');
-
-  const isWin = gameLoop(0, gameIteration);
-  showResult(userName, isWin);
-};
+export default () => playGame('Find the greatest common divisor of given numbers.', gameIteration);

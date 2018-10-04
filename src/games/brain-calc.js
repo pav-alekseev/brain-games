@@ -1,6 +1,6 @@
 import {
-  maxRandomNumber, showGameGreeting, showUserGreeting, showQuestion, showResult, getUserName,
-  getUserAnswer, getRandomNumber, getRandomExpression, gameLoop, isRightUserAnswer,
+  maxRandomNumber, showQuestion, getUserAnswer, getRandomNumber, getRandomExpression,
+  isRightUserAnswer, playGame,
 } from '..';
 
 const gameIteration = () => {
@@ -13,14 +13,4 @@ const gameIteration = () => {
   return isRightUserAnswer(rightAnswer, userAnswer);
 };
 
-export default () => {
-  showGameGreeting();
-  console.log('What is result of the expression?\n');
-
-  const userName = getUserName();
-  showUserGreeting(userName);
-  console.log('\n');
-
-  const isWin = gameLoop(0, gameIteration);
-  showResult(userName, isWin);
-};
+export default () => playGame('What is result of the expression?', gameIteration);
