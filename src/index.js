@@ -1,12 +1,23 @@
 import readlineSync from 'readline-sync';
-import Addition from './expressions/addition';
-import Substraction from './expressions/substraction';
-import Multiplication from './expressions/multiplication';
 
 const numberOfLaps = 3;
-const expressionTypes = [Addition, Substraction, Multiplication];
 
 export const maxRandomNumber = 20;
+
+const expressions = [
+  {
+    calculate: (firstNumber, secondNumber) => firstNumber + secondNumber,
+    show: (firstNumber, secondNumber) => `${firstNumber} + ${secondNumber}`,
+  },
+  {
+    calculate: (firstNumber, secondNumber) => firstNumber - secondNumber,
+    show: (firstNumber, secondNumber) => `${firstNumber} - ${secondNumber}`,
+  },
+  {
+    calculate: (firstNumber, secondNumber) => firstNumber * secondNumber,
+    show: (firstNumber, secondNumber) => `${firstNumber} * ${secondNumber}`,
+  },
+];
 
 export const showGameGreeting = () => console.log('Welcome to the Brain Games!');
 
@@ -34,12 +45,7 @@ export const getUserAnswer = () => {
 
 export const getRandomNumber = maxNumber => Math.floor(Math.random() * Math.floor(maxNumber));
 
-export const getRandomExpression = () => {
-  const firstNumber = getRandomNumber(maxRandomNumber);
-  const secondNumber = getRandomNumber(maxRandomNumber);
-  const Expression = expressionTypes[getRandomNumber(expressionTypes.length)];
-  return new Expression(firstNumber, secondNumber);
-};
+export const getRandomExpression = () => expressions[getRandomNumber(expressions.length)];
 
 export const isRightUserAnswer = (rightAnswer, userAnswer) => {
   if (rightAnswer === userAnswer) {

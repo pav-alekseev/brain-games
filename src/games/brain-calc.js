@@ -1,12 +1,14 @@
 import {
-  showGameGreeting, showUserGreeting, showQuestion, showResult, getUserName, getUserAnswer,
-  getRandomExpression, gameLoop, isRightUserAnswer,
+  maxRandomNumber, showGameGreeting, showUserGreeting, showQuestion, showResult, getUserName,
+  getUserAnswer, getRandomNumber, getRandomExpression, gameLoop, isRightUserAnswer,
 } from '..';
 
 const gameIteration = () => {
+  const firstNumber = getRandomNumber(maxRandomNumber);
+  const secondNumber = getRandomNumber(maxRandomNumber);
   const questionExpression = getRandomExpression();
-  showQuestion(questionExpression);
-  const rightAnswer = questionExpression.calculate();
+  showQuestion(questionExpression.show(firstNumber, secondNumber));
+  const rightAnswer = questionExpression.calculate(firstNumber, secondNumber);
   const userAnswer = Number(getUserAnswer());
   return isRightUserAnswer(rightAnswer, userAnswer);
 };
