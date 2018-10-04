@@ -64,3 +64,16 @@ export const gameLoop = (currentLap, gameIteration) => {
   }
   return gameIteration() ? gameLoop(currentLap + 1, gameIteration) : false;
 };
+
+export const playGame = (rules, gameIteration) => {
+  showGameGreeting();
+  console.log(rules);
+  console.log('\n');
+
+  const userName = getUserName();
+  showUserGreeting(userName);
+  console.log('\n');
+
+  const isWin = gameLoop(0, gameIteration);
+  showResult(userName, isWin);
+};
