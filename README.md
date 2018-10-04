@@ -30,3 +30,6 @@ $ make install
 
 ### brain-gcd
 [![asciicast](https://asciinema.org/a/pjOJzSzilCeicFiyRLopHxR4j.png)](https://asciinema.org/a/pjOJzSzilCeicFiyRLopHxR4j)
+
+### brain-progression
+[![asciicast](https://asciinema.org/a/j2nNkgd9KowbEExovCx5U2gw1.png)](https://asciinema.org/a/j2nNkgd9KowbEExovCx5U2gw1)
