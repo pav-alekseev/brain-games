@@ -1,6 +1,8 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 
+const numberOfLaps = 3;
+
 const showGameGreeting = () => console.log('Welcome to the Brain Games!');
 
 const showUserGreeting = userName => console.log(`Hello, ${userName}!`);
@@ -25,7 +27,7 @@ const getUserAnswer = () => {
   return answer;
 };
 
-const gameLoop = (currentLap, numberOfLaps, gameIteration) => {
+const gameLoop = (currentLap, gameIteration) => {
   if (currentLap === numberOfLaps) {
     return true;
   }
@@ -38,7 +40,7 @@ const gameLoop = (currentLap, numberOfLaps, gameIteration) => {
   const userAnswer = getUserAnswer();
   if (userAnswer === rightAnswer) {
     console.log('Correct!');
-    return gameLoop(currentLap + 1, numberOfLaps, gameIteration);
+    return gameLoop(currentLap + 1, gameIteration);
   }
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
   return false;
@@ -57,6 +59,6 @@ export default (rules, gameIteration) => {
     return;
   }
 
-  const isWin = gameLoop(0, 3, gameIteration);
+  const isWin = gameLoop(0, gameIteration);
   showResult(userName, isWin);
 };
