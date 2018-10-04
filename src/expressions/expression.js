@@ -1,7 +1,8 @@
 export default class Expression {
-  constructor(firstNumber, secondNumber) {
+  constructor(firstNumber, secondNumber, sign) {
     this.firstNumber = firstNumber;
     this.secondNumber = secondNumber;
+    this.sign = sign;
   }
 
   toString() {
