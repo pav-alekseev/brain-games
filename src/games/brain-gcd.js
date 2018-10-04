@@ -5,7 +5,7 @@ import {
 const maxNumber = 100;
 
 const getGCD = (firstNumber, secondNumber) => {
-  if (firstNumber === 0 && secondNumber === 0) {
+  if (firstNumber === 0 || secondNumber === 0) {
     return 0;
   }
   if (firstNumber === secondNumber) {
