@@ -15,5 +15,18 @@ This is the first [Hexlet](https://ru.hexlet.io) project
 $ make install
 ```
 
-## Installation video
-[![asciicast](https://asciinema.org/a/seDMGM0KxapGbMC51jqDlAGjY.png)](https://asciinema.org/a/seDMGM0KxapGbMC51jqDlAGjY)
+### Installation video
+[![asciicast](https://asciinema.org/a/y9c6S8LgS8GXgRl7GHTmkO7mn.png)](https://asciinema.org/a/y9c6S8LgS8GXgRl7GHTmkO7mn)
+
+## Games
+### brain-games
+[![asciicast](https://asciinema.org/a/nrxsybu9aUKVTnX7KgaRHlX7v.png)](https://asciinema.org/a/nrxsybu9aUKVTnX7KgaRHlX7v)
+
+### brain-even
+[![asciicast](https://asciinema.org/a/iIsf9eRHRD10i5oP6axVOLTeb.png)](https://asciinema.org/a/iIsf9eRHRD10i5oP6axVOLTeb)
+
+### brain-calc
+[![asciicast](https://asciinema.org/a/BgEjBB3gzG8g6oeTBb8iqW7O4.png)](https://asciinema.org/a/BgEjBB3gzG8g6oeTBb8iqW7O4)
+
+### brain-gcd
+[![asciicast](https://asciinema.org/a/pjOJzSzilCeicFiyRLopHxR4j.png)](https://asciinema.org/a/pjOJzSzilCeicFiyRLopHxR4j)
