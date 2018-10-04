@@ -1,6 +1,6 @@
 import {
-  maxRandomNumber, showGameGreeting, showQuestion, showResult, getUserName, getUserAnswer,
-  getRandomNumber, gameLoop, isRightUserAnswer, isEven,
+  maxRandomNumber, showGameGreeting, showUserGreeting, showQuestion, showResult, getUserName,
+  getUserAnswer, getRandomNumber, gameLoop, isRightUserAnswer, isEven,
 } from '..';
 
 const gameIteration = () => {
@@ -16,6 +16,7 @@ export default () => {
   console.log('Answer "yes" if number even otherwise answer "no"\n');
 
   const userName = getUserName();
+  showUserGreeting(userName);
   console.log('\n');
 
   const isWin = gameLoop(0, gameIteration);
