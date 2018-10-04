@@ -1,6 +1,6 @@
-import {
-  showQuestion, getUserAnswer, getRandomNumber, isRightUserAnswer, playGame,
-} from '..';
+import { cons } from 'hexlet-pairs';
+import playGame from '..';
+import getRandomNumber from '../utils';
 
 const maxNumber = 100;
 
@@ -20,10 +20,9 @@ const getGCD = (firstNumber, secondNumber) => {
 const gameIteration = () => {
   const firstNumber = getRandomNumber(maxNumber);
   const secondNumber = getRandomNumber(maxNumber);
-  showQuestion(`${firstNumber} ${secondNumber}`);
-  const rightAnswer = getGCD(firstNumber, secondNumber);
-  const userAnswer = Number(getUserAnswer());
-  return isRightUserAnswer(rightAnswer, userAnswer);
+  const question = `${firstNumber} ${secondNumber}`;
+  const rightAnswer = getGCD(firstNumber, secondNumber).toString();
+  return cons(question, rightAnswer);
 };
 
 export default () => playGame('Find the greatest common divisor of given numbers.', gameIteration);

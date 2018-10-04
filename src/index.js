@@ -1,29 +1,13 @@
 import readlineSync from 'readline-sync';
+import { car, cdr } from 'hexlet-pairs';
 
-const numberOfLaps = 3;
+const showGameGreeting = () => console.log('Welcome to the Brain Games!');
 
-const expressions = [
-  {
-    calculate: (firstNumber, secondNumber) => firstNumber + secondNumber,
-    show: (firstNumber, secondNumber) => `${firstNumber} + ${secondNumber}`,
-  },
-  {
-    calculate: (firstNumber, secondNumber) => firstNumber - secondNumber,
-    show: (firstNumber, secondNumber) => `${firstNumber} - ${secondNumber}`,
-  },
-  {
-    calculate: (firstNumber, secondNumber) => firstNumber * secondNumber,
-    show: (firstNumber, secondNumber) => `${firstNumber} * ${secondNumber}`,
-  },
-];
+const showUserGreeting = userName => console.log(`Hello, ${userName}!`);
 
-export const showGameGreeting = () => console.log('Welcome to the Brain Games!');
+const showQuestion = question => console.log(`Question: ${question}`);
 
-export const showUserGreeting = userName => console.log(`Hello, ${userName}!`);
-
-export const showQuestion = question => console.log(`Question: ${question}`);
-
-export const showResult = (userName, isWin) => {
+const showResult = (userName, isWin) => {
   if (isWin) {
     console.log(`Congratulations, ${userName}!`);
   } else {
@@ -31,39 +15,36 @@ export const showResult = (userName, isWin) => {
   }
 };
 
-export const getUserName = () => {
+const getUserName = () => {
   const userName = readlineSync.question('May I have your name? ');
   return userName;
 };
 
-export const getUserAnswer = () => {
+const getUserAnswer = () => {
   const answer = readlineSync.question('Your answer: ');
   return answer;
 };
 
-export const getRandomNumber = maxNumber => Math.floor(Math.random() * Math.floor(maxNumber));
-
-export const getRandomExpression = () => expressions[getRandomNumber(expressions.length)];
-
-export const isRightUserAnswer = (rightAnswer, userAnswer) => {
-  if (rightAnswer === userAnswer) {
-    console.log('Correct!');
+const gameLoop = (currentLap, numberOfLaps, gameIteration) => {
+  if (currentLap === numberOfLaps) {
     return true;
+  }
+
+  const gamePair = gameIteration();
+  const question = car(gamePair);
+  const rightAnswer = cdr(gamePair);
+
+  showQuestion(question);
+  const userAnswer = getUserAnswer();
+  if (userAnswer === rightAnswer) {
+    console.log('Correct!');
+    return gameLoop(currentLap + 1, numberOfLaps, gameIteration);
   }
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
   return false;
 };
 
-export const isEven = number => number % 2 === 0;
-
-export const gameLoop = (currentLap, gameIteration) => {
-  if (currentLap === numberOfLaps) {
-    return true;
-  }
-  return gameIteration() ? gameLoop(currentLap + 1, gameIteration) : false;
-};
-
-export const playGame = (rules, gameIteration) => {
+export default (rules, gameIteration) => {
   showGameGreeting();
   console.log(rules);
   console.log('\n');
@@ -72,6 +53,10 @@ export const playGame = (rules, gameIteration) => {
   showUserGreeting(userName);
   console.log('\n');
 
-  const isWin = gameLoop(0, gameIteration);
+  if (!gameIteration) {
+    return;
+  }
+
+  const isWin = gameLoop(0, 3, gameIteration);
   showResult(userName, isWin);
 };

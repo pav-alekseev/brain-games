@@ -1,4 +1,4 @@
-import { playGame } from '..';
+import playGame from '..';
 
 const gameIteration = () => {};
 

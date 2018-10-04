@@ -1,9 +1,3 @@
-import { showGameGreeting, showUserGreeting, getUserName } from '..';
+import playGame from '..';
 
-export default () => {
-  showGameGreeting();
-  console.log('\n');
-
-  const userName = getUserName();
-  showUserGreeting(userName);
-};
+export default () => playGame('');
