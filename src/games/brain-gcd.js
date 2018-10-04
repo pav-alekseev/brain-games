@@ -12,10 +12,8 @@ const getGCD = (firstNumber, secondNumber) => {
   if (firstNumber === secondNumber) {
     return firstNumber;
   }
-  if (firstNumber > secondNumber) {
-    return getGCD(firstNumber - secondNumber, secondNumber);
-  }
-  return getGCD(firstNumber, secondNumber - firstNumber);
+  return firstNumber > secondNumber ? getGCD(firstNumber - secondNumber, secondNumber)
+    : getGCD(firstNumber, secondNumber - firstNumber);
 };
 
 const gameIteration = () => {
