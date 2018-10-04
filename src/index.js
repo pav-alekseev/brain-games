@@ -14,6 +14,14 @@ export const showUserGreeting = userName => console.log(`Hello, ${userName}!`);
 
 export const showQuestion = question => console.log(`Question: ${question}`);
 
+export const showResult = (userName, isWin) => {
+  if (isWin) {
+    console.log(`Congratulations, ${userName}!`);
+  } else {
+    console.log(`Let's try again, ${userName}!`);
+  }
+};
+
 export const getUserName = () => {
   const userName = readlineSync.question('May I have your name? ');
   return userName;

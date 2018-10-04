@@ -1,5 +1,5 @@
 import {
-  showGameGreeting, showUserGreeting, showQuestion, getUserName, getUserAnswer,
+  showGameGreeting, showUserGreeting, showQuestion, showResult, getUserName, getUserAnswer,
   getRandomExpression, gameLoop, isRightUserAnswer,
 } from '..';
 
@@ -20,9 +20,5 @@ export default () => {
   console.log('\n');
 
   const isWin = gameLoop(0, gameIteration);
-  if (isWin) {
-    console.log(`Congratulations, ${userName}!`);
-  } else {
-    console.log(`Let's try again, ${userName}!`);
-  }
+  showResult(userName, isWin);
 };
