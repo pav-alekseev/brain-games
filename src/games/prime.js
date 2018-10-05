@@ -3,9 +3,15 @@ import playGame from '..';
 import getRandomNumber from '../utils';
 
 const maxNumber = 1000;
-const firstPrimeNumber = 2;
 
 const isPrime = (number) => {
+  const firstPrime = 2;
+  if (number < firstPrime) {
+    return false;
+  }
+  if (number === firstPrime) {
+    return true;
+  }
   const iter = (divider) => {
     if (number % divider === 0) {
       return false;
@@ -15,11 +21,11 @@ const isPrime = (number) => {
     }
     return iter(divider + 1);
   };
-  return iter(firstPrimeNumber);
+  return iter(firstPrime);
 };
 
 const gameIteration = () => {
-  const question = getRandomNumber(firstPrimeNumber, maxNumber);
+  const question = getRandomNumber(0, maxNumber);
   const rightAnswer = isPrime(question) ? 'yes' : 'no';
   return cons(question, rightAnswer);
 };

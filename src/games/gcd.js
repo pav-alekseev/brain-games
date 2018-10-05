@@ -5,16 +5,10 @@ import getRandomNumber from '../utils';
 const maxNumber = 100;
 
 const getGCD = (firstNumber, secondNumber) => {
-  if (firstNumber === 0 || secondNumber === 0) {
-    return 0;
-  }
-  if (firstNumber === secondNumber) {
+  if (secondNumber === 0) {
     return firstNumber;
   }
-  if (firstNumber > secondNumber) {
-    return getGCD(firstNumber - secondNumber, secondNumber);
-  }
-  return getGCD(firstNumber, secondNumber - firstNumber);
+  return getGCD(secondNumber, firstNumber % secondNumber);
 };
 
 const gameIteration = () => {
