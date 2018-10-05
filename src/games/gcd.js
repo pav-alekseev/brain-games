@@ -18,8 +18,8 @@ const getGCD = (firstNumber, secondNumber) => {
 };
 
 const gameIteration = () => {
-  const firstNumber = getRandomNumber(maxNumber);
-  const secondNumber = getRandomNumber(maxNumber);
+  const firstNumber = getRandomNumber(0, maxNumber);
+  const secondNumber = getRandomNumber(0, maxNumber);
   const question = `${firstNumber} ${secondNumber}`;
   const rightAnswer = getGCD(firstNumber, secondNumber).toString();
   return cons(question, rightAnswer);

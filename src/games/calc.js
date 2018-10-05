@@ -19,14 +19,14 @@ const expressions = [
   },
 ];
 
-export const getRandomExpression = () => expressions[getRandomNumber(expressions.length)];
+export const getRandomExpression = () => expressions[getRandomNumber(0, expressions.length)];
 
 const gameIteration = () => {
-  const firstNumber = getRandomNumber(maxNumber);
-  const secondNumber = getRandomNumber(maxNumber);
-  const question = getRandomExpression();
-  const rightAnswer = question.calculate(firstNumber, secondNumber).toString();
-  return cons(question.toString(firstNumber, secondNumber), rightAnswer);
+  const firstNumber = getRandomNumber(0, maxNumber);
+  const secondNumber = getRandomNumber(0, maxNumber);
+  const questionExpression = getRandomExpression();
+  const rightAnswer = questionExpression.calculate(firstNumber, secondNumber).toString();
+  return cons(questionExpression.toString(firstNumber, secondNumber), rightAnswer);
 };
 
 export default () => playGame('What is result of the expression?', gameIteration);

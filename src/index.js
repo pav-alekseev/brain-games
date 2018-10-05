@@ -3,28 +3,12 @@ import { car, cdr } from 'hexlet-pairs';
 
 const numberOfLaps = 3;
 
-const showGameGreeting = () => console.log('Welcome to the Brain Games!');
-
-const showUserGreeting = userName => console.log(`Hello, ${userName}!`);
-
-const showQuestion = question => console.log(`Question: ${question}`);
-
 const showResult = (userName, isWin) => {
   if (isWin) {
     console.log(`Congratulations, ${userName}!`);
   } else {
     console.log(`Let's try again, ${userName}!`);
   }
-};
-
-const getUserName = () => {
-  const userName = readlineSync.question('May I have your name? ');
-  return userName;
-};
-
-const getUserAnswer = () => {
-  const answer = readlineSync.question('Your answer: ');
-  return answer;
 };
 
 const gameLoop = (currentLap, gameIteration) => {
@@ -36,8 +20,8 @@ const gameLoop = (currentLap, gameIteration) => {
   const question = car(gamePair);
   const rightAnswer = cdr(gamePair);
 
-  showQuestion(question);
-  const userAnswer = getUserAnswer();
+  console.log(`Question: ${question}`);
+  const userAnswer = readlineSync.question('Your answer: ');
   if (userAnswer === rightAnswer) {
     console.log('Correct!');
     return gameLoop(currentLap + 1, gameIteration);
@@ -46,14 +30,13 @@ const gameLoop = (currentLap, gameIteration) => {
   return false;
 };
 
-export default (rules, gameIteration) => {
-  showGameGreeting();
-  console.log(rules);
+export default (description, gameIteration) => {
+  console.log('Welcome to the Brain Games!');
+  console.log(description);
   console.log('\n');
 
-  const userName = getUserName();
-  showUserGreeting(userName);
-  console.log('\n');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!\n`);
 
   if (!gameIteration) {
     return;

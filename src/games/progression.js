@@ -18,9 +18,9 @@ const createQuestion = (currentNumber, step, currentLength, questionStep) => {
 };
 
 const gameIteration = () => {
-  const beginOfProgression = getRandomNumber(maxBeginOfProgression);
-  const step = getRandomNumber(maxNumberOfSteps);
-  const questionStep = getRandomNumber(lengthOfProgression);
+  const beginOfProgression = getRandomNumber(0, maxBeginOfProgression);
+  const step = getRandomNumber(0, maxNumberOfSteps);
+  const questionStep = getRandomNumber(0, lengthOfProgression);
   const question = createQuestion(beginOfProgression, step, 0, questionStep);
   const rightAnswer = (beginOfProgression + step * questionStep).toString();
   return cons(question, rightAnswer);
