@@ -4,6 +4,9 @@ This is mini games set. This project was completed in accordance with the task o
 
 ## Requirements
 * Node
+```sh
+$ sudo apt-get install node
+```
 
 ## Installation
 ```sh
