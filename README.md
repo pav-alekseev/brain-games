@@ -1,13 +1,15 @@
-##
-[![Hexlet Ltd. logo](https://raw.githubusercontent.com/Hexlet/hexletguides.github.io/master/images/hexlet_logo128.png)](https://ru.hexlet.io/pages/about?utm_source=github&utm_medium=link&utm_campaign=nodejs-package)
+# brain-games-rukkiesman [![Maintainability](https://api.codeclimate.com/v1/badges/12b1932a3601cd810971/maintainability)](https://codeclimate.com/github/RukkiesMan/project-lvl1-s356/maintainability) [![Build Status](https://travis-ci.com/RukkiesMan/project-lvl1-s356.svg?branch=master)](https://travis-ci.com/RukkiesMan/project-lvl1-s356)
 
-This is the first [Hexlet](https://ru.hexlet.io) project
-##
+This is mini games set. This project was completed in accordance with the task on [Hexlet](https://hexlet.io).
 
-# brain-games-rukkiesman
+## Requirements
+* Node
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/12b1932a3601cd810971/maintainability)](https://codeclimate.com/github/RukkiesMan/project-lvl1-s356/maintainability)
-[![Build Status](https://travis-ci.com/RukkiesMan/project-lvl1-s356.svg?branch=master)](https://travis-ci.com/RukkiesMan/project-lvl1-s356)
+## Installation
+```sh
+$ sudo npm install -g brain-games-rukkiesman
+```
+[![asciicast](https://asciinema.org/a/y9c6S8LgS8GXgRl7GHTmkO7mn.png)](https://asciinema.org/a/y9c6S8LgS8GXgRl7GHTmkO7mn)
 
 ## Setup
 
@@ -15,10 +17,7 @@ This is the first [Hexlet](https://ru.hexlet.io) project
 $ make install
 ```
 
-### Installation video
-[![asciicast](https://asciinema.org/a/y9c6S8LgS8GXgRl7GHTmkO7mn.png)](https://asciinema.org/a/y9c6S8LgS8GXgRl7GHTmkO7mn)
-
-## Games
+## Usage
 ### brain-games
 [![asciicast](https://asciinema.org/a/nrxsybu9aUKVTnX7KgaRHlX7v.png)](https://asciinema.org/a/nrxsybu9aUKVTnX7KgaRHlX7v)
 
@@ -36,3 +35,6 @@ $ make install
 
 ### brain-prime
 [![asciicast](https://asciinema.org/a/Tol5mpe1t25n3xFheRQljlPlh.png)](https://asciinema.org/a/Tol5mpe1t25n3xFheRQljlPlh)
+
+## Project Status
+The project is completed.
