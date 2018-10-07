@@ -9,32 +9,26 @@ This is mini games set. This project was completed in accordance with the task o
 ```sh
 $ sudo npm install -g brain-games-rukkiesman
 ```
-[![asciicast](https://asciinema.org/a/y9c6S8LgS8GXgRl7GHTmkO7mn.png)](https://asciinema.org/a/y9c6S8LgS8GXgRl7GHTmkO7mn)
-
-## Setup
-
-```sh
-$ make install
-```
+[![asciicast](https://asciinema.org/a/lbAbxD1Wt2SCezGYLE7U0iMBD.png)](https://asciinema.org/a/lbAbxD1Wt2SCezGYLE7U0iMBD)
 
 ## Usage
 ### brain-games
-[![asciicast](https://asciinema.org/a/nrxsybu9aUKVTnX7KgaRHlX7v.png)](https://asciinema.org/a/nrxsybu9aUKVTnX7KgaRHlX7v)
+[![asciicast](https://asciinema.org/a/whuTo0XS9ifCuIzdzfEFWUEGn.png)](https://asciinema.org/a/whuTo0XS9ifCuIzdzfEFWUEGn)
 
 ### brain-even
-[![asciicast](https://asciinema.org/a/iIsf9eRHRD10i5oP6axVOLTeb.png)](https://asciinema.org/a/iIsf9eRHRD10i5oP6axVOLTeb)
+[![asciicast](https://asciinema.org/a/7emhmnWRySO7WKmEkB5OPFf80.png)](https://asciinema.org/a/7emhmnWRySO7WKmEkB5OPFf80)
 
 ### brain-calc
-[![asciicast](https://asciinema.org/a/BgEjBB3gzG8g6oeTBb8iqW7O4.png)](https://asciinema.org/a/BgEjBB3gzG8g6oeTBb8iqW7O4)
+[![asciicast](https://asciinema.org/a/h2ENIefBb23JnHPPjE8vbHm7r.png)](https://asciinema.org/a/h2ENIefBb23JnHPPjE8vbHm7r)
 
 ### brain-gcd
-[![asciicast](https://asciinema.org/a/pjOJzSzilCeicFiyRLopHxR4j.png)](https://asciinema.org/a/pjOJzSzilCeicFiyRLopHxR4j)
+[![asciicast](https://asciinema.org/a/dHxVZAtSVnHhXPvwBWQY3nngW.png)](https://asciinema.org/a/dHxVZAtSVnHhXPvwBWQY3nngW)
 
 ### brain-progression
-[![asciicast](https://asciinema.org/a/j2nNkgd9KowbEExovCx5U2gw1.png)](https://asciinema.org/a/j2nNkgd9KowbEExovCx5U2gw1)
+[![asciicast](https://asciinema.org/a/f3OGI9odcX0ZtPe0DRFyGGPEq.png)](https://asciinema.org/a/f3OGI9odcX0ZtPe0DRFyGGPEq)
 
 ### brain-prime
-[![asciicast](https://asciinema.org/a/Tol5mpe1t25n3xFheRQljlPlh.png)](https://asciinema.org/a/Tol5mpe1t25n3xFheRQljlPlh)
+[![asciicast](https://asciinema.org/a/elVbjt3nynrfr4KLABrHHumIc.png)](https://asciinema.org/a/elVbjt3nynrfr4KLABrHHumIc)
 
 ## Project Status
 The project is completed.
