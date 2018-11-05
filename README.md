@@ -1,5 +1,5 @@
 # brain-games
-[![Maintainability](https://api.codeclimate.com/v1/badges/12b1932a3601cd810971/maintainability)](https://codeclimate.com/github/RukkiesMan/project-lvl1-s356/maintainability) [![Build Status](https://travis-ci.com/RukkiesMan/brain-games-rukkiesman.svg?branch=master)](https://travis-ci.com/RukkiesMan/brain-games-rukkiesman)
+[![Maintainability](https://api.codeclimate.com/v1/badges/12b1932a3601cd810971/maintainability)](https://codeclimate.com/github/RukkiesMan/project-lvl1-s356/maintainability) [![Build Status](https://travis-ci.com/RukkiesMan/brain-games.svg?branch=master)](https://travis-ci.com/RukkiesMan/brain-games)
 
 This is mini games set. This project was completed in accordance with the task on [Hexlet](https://hexlet.io).
 
