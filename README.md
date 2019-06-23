@@ -36,3 +36,7 @@ $ sudo npm install -g brain-games-rukkiesman
 
 ## Project Status
 The project is completed.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
